@@ -87,14 +87,14 @@ public class TimeUtil {
 
         if (iWeek - 7 >= tWeek) {
             // 超过一周
-            return formatTime(date, TIME_FORMAT_18);
+            return formatTime(date, TIME_FORMAT_11);
         }
 
         //  是否一天
         if (iDay != tDay) {
             // 是否昨天
             if (iDay - tDay == 1) {
-                return "昨天" + formatTime(date, TIME_FORMAT_14);
+                return "昨天 " + formatTime(date, TIME_FORMAT_14);
             } else {
                 switch (tDay) {
                     case Calendar.MONDAY:
@@ -117,15 +117,16 @@ public class TimeUtil {
         }
 
         if (iHour != tHour) {
-            return formatTime(date, TIME_FORMAT_14);
+            return "今日 "+formatTime(date, TIME_FORMAT_14);
         }
 
         int iMin = instance.get(Calendar.MINUTE);
         int tMin = time.get(Calendar.MINUTE);
         if (iMin == tMin) {
-            return "刚刚";
+//            return "刚刚"
+            return "今日 "+formatTime(date, TIME_FORMAT_14);
         } else {
-            return formatTime(date, TIME_FORMAT_14);
+            return "今日 "+formatTime(date, TIME_FORMAT_14);
         }
     }
 

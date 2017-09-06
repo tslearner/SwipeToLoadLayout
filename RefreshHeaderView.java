@@ -75,9 +75,9 @@ public class RefreshHeaderView extends LinearLayout implements SwipeRefreshTrigg
         progressBar.setVisibility(GONE);
         lastTime = (long) SharePreferenceUtils.getParam(getContext(), LAST_UPDATE_TIME, 0L);
         if (lastTime == 0) {
-            updateTime.setText("最后更新:无");
+            updateTime.setText("无");
         } else {
-            updateTime.setText("最后更新:" + TimeUtil.timeShow(lastTime));
+            updateTime.setText(TimeUtil.timeShow(lastTime));
         }
 
     }
