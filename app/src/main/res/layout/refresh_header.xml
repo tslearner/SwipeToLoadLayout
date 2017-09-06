@@ -29,21 +29,34 @@
 
 
     <RelativeLayout
-        android:layout_width="100dp"
+        android:layout_width="146dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
         android:layout_gravity="center_vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/description"
-            android:text=""
+            android:textAlignment="center"
+            android:text="下拉刷新"
             android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/last_update"
+            android:text="最后更新:"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/description"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/update_time"
-            android:layout_below="@+id/description"
+            android:layout_toRightOf="@+id/last_update"
+            android:layout_alignTop="@+id/last_update"
+            android:layout_marginLeft="2dp"
+            android:textAlignment="viewEnd"
             android:text=""
             android:visibility="visible"/>
 
